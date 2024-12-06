@@ -1,5 +1,5 @@
 import Navbar from "./Navbar"
-
+import HeroSection from "./HeroSection"
 // import  './App.css'
 
 
@@ -23,7 +23,11 @@ export default function App() {
     //   <pre className="header">jskaanjkaeno</pre>
     //   <Navbar/>
     // </>
-    <Navbar/>
+
+    <>
+      <Navbar/>
+      <HeroSection/>
+    </>
 
 
 
