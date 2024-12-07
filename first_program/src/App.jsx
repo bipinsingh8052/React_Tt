@@ -1,5 +1,6 @@
 import Navbar from "./Navbar"
 import HeroSection from "./HeroSection"
+import Event from "./Event"
 // import  './App.css'
 
 
@@ -27,6 +28,7 @@ export default function App() {
     <>
       <Navbar/>
       <HeroSection/>
+      <Event/>
     </>
 
 
