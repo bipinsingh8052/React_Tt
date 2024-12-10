@@ -1,11 +1,11 @@
 import GrandChiild from "./GrandChiild"
-export default function Child(props) {
+export default function Child({Name,Age,id}) {
     return (
       <div>
-        <h1>{props.Name}</h1>
-        <h2>{props.Age}</h2>
-        <h3>{props.id}</h3>
-        <GrandChiild Fname={props.Name} Fage={props.Age} FId={props.id} />
+        <h1> first{Name}</h1>
+        <h2>first{Age}</h2>
+        <h3>first {id}</h3>
+        <GrandChiild Fname={Name} Fage={Age} FId={id} />
       </div>
     )
   }
