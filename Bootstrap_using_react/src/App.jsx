@@ -7,6 +7,7 @@ function App() {
     <>
       <Navbar/>
       <Card/>
+      <h1 className="text-primary">Hello world</h1>
        
     </>
   )
