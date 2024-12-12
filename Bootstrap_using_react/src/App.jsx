@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Container from "./Container"
 import Navbar from "./Navbar"
 
 
@@ -8,6 +9,7 @@ function App() {
       <Navbar/>
       <Card/>
       <h1 className="text-primary">Hello world</h1>
+      <Container/>
        
     </>
   )
