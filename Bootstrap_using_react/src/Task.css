@@ -1,0 +1,13 @@
+.colui{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* .loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+} */
