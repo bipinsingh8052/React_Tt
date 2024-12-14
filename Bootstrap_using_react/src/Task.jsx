@@ -21,7 +21,7 @@ ore natus dolor quaerat voluptas nihil. Ipsa, ut velit dolor a ea dolore! Odio a
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div className="colui d-flex">
                     <div className="price">$876</div>
-                <a href="\" className="btn btn-primary">Go somewhere</a>
+                <a href="\" className="btn btn-outline btn-primary">Go somewhere</a>
                 </div>
             </div>
             </div>
