@@ -1,0 +1,13 @@
+.conatienr{
+    height: 200px;
+    width: 100%;
+    border: 2px solid black;background-color: white;
+}
+.buttons{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
