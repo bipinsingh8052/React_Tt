@@ -3,7 +3,7 @@ import  { useState } from 'react'
 export default function IF_and_else() {
 
     let [para ,setPara]=useState(false);
-    let p=" ";
+    // let p=" ";
 
         // (para)?p=<h1>time is know it </h1>" : p=''
         // if(para){
@@ -20,9 +20,24 @@ export default function IF_and_else() {
       {/* when you do it same task in one button then you use it like it  */}
       {/* <button onClick={()=>setPara(false)}> close</button> */}
     </div>
-    {/* {(para)?p=<h1>time is know it </h1>" : p = '' } */}
-    {p}
+
+
+    {/* in line condection */}
+  
+
+
+
+
+
+
+
+
+    {/* {p} */}
     </>
    
   )
 }
+
+
+
+
