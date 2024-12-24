@@ -4,34 +4,38 @@ function InputValue() {
     const [SecondInput,setSecondInput]=useState("");
     const [In,setIn]=useState("")
     const [t,sett]=useState(false)
+
       function InputValue(event){
           setInput(event.target.value);
       }
       function SecondInputvalue(event){
         setSecondInput(event.target.value);
       }
+
+
+
       function Submit(){
-        INputValueBtn();
+        
+        console.log(In);
         if(In==""){
             console.log(false)
-            return false
+            sett(false);
         }
         else{
             console.log(true)
-            return true
+            // return true
+            sett(true);
 
         }
-        
-        
       }
       function INputValueBtn(event){
-        setin(event.target.value);
+        setIn(event.target.value);
       }
 
 
     return (
         <>
-             {/* <div>
+             <div>
         <h1>This is your name</h1>
           <h1 style={{fontSize:"30px"}}>{Input}</h1>
          <input type="text" placeholder="Enter the Name" onChange={InputValue} />
@@ -39,9 +43,9 @@ function InputValue() {
          <h1>{SecondInput}</h1>
          <input type="text" placeholder="Enter the surname name"  onChange={SecondInputvalue}/>
        
-      </div> */}
+      </div>
       <div>
-        {(In=="")?<h1>{In}</h1>:<p>false</p>}
+        {(In == "")?<h1>{In}</h1>:"para"}
         <input type="text"  placeholder="Enter the value" onChange={INputValueBtn} />
 
         <button onClick={Submit}>Submit</button>
