@@ -14,10 +14,9 @@ function InputValue() {
 
 
 
-      function Submit(){
-        
+      function Submit(){ 
         console.log(In);
-        if(In==""){
+        if(t){
             console.log(false)
             sett(false);
         }
@@ -27,9 +26,15 @@ function InputValue() {
             sett(true);
 
         }
+        
       }
       function INputValueBtn(event){
+        if(In == ""){
+          setIn(event.target.value);
+        }
+        else{
         setIn(event.target.value);
+        }
       }
 
 
@@ -45,7 +50,7 @@ function InputValue() {
        
       </div>
       <div>
-        {(In == "")?<h1>{In}</h1>:"para"}
+        {(t)?<h1>{In}</h1>:false}
         <input type="text"  placeholder="Enter the value" onChange={INputValueBtn} />
 
         <button onClick={Submit}>Submit</button>
