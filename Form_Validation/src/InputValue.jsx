@@ -42,7 +42,7 @@ function InputValue() {
         <>
              <div>
         <h1>This is your name</h1>
-          <h1 style={{fontSize:"30px"}}>{Input}</h1>
+          <h1 style={{fontSize:"30px"}}>my name is {Input}</h1>
          <input type="text" placeholder="Enter the Name" onChange={InputValue} />
          <p>Enter the Surname</p>
          <h1>{SecondInput}</h1>
@@ -50,7 +50,7 @@ function InputValue() {
        
       </div>
       <div>
-        {(t)?<h1>{In}</h1>:false}
+        {(t)?<h1>{In}</h1>:<p>{In}</p>}
         <input type="text"  placeholder="Enter the value" onChange={INputValueBtn} />
 
         <button onClick={Submit}>Submit</button>
