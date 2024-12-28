@@ -1,3 +1,4 @@
+import Filter_method from "./Filter_method"
 import From_Validation from "./From_Validation"
 import InputValue from "./InputValue"
 import Map_method from "./Map_method"
@@ -11,8 +12,9 @@ function App() {
     <>
       {/* <InputValue/> */}
       {/* <From_Validation/> */}
-      {/* <New_form/> */}
-      <Map_method/>
+      <New_form/>
+      {/* <Map_method/> */}
+      {/* <Filter_method/> */}
     </>
   )
 }
