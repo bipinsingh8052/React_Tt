@@ -6,7 +6,7 @@ function LoginPage() {
         Username:"",
         Password:""
     })
-    // let [Data,setData]=useState(null)
+    let [Data,setData]=useState(null)
     let [stautus ,setStatus]=useState(false);
     function Inputvalue(e){
         let {name,value}=e.target
@@ -19,14 +19,22 @@ function LoginPage() {
 
     function submitform(e){
         e.preventDefault();
-        let a=JSON.parse(localStorage.getItem("react"));
-        console.log(a)
-        let email=a.Email;
-        let pass=a.password;
-        if(input.name==email ){
+        // let a=JSON.parse(localStorage.getItem("react"));
+        // console.log(a)
+        // let email=a.Email;
+        // let pass=a.password;
+        console.log(Data.Email,Data.password)
+        console.log(input.Username)
+        if(input.Username== ""){
            alert("given the input is currect!!!");
         }
-        else if(input.password!= pass){
+        else if(input.Username === Data.Email){
+            alert(" not matching the email");
+        }
+        else if(input.Password === ""){
+            alert("3456754");
+        }
+        else if(input.Password=== Data.password){
             alert("given the password it is this ");
         }
         else{
@@ -34,7 +42,11 @@ function LoginPage() {
         }
     }
 
+useEffect(()=>{
+    let a =JSON.parse( localStorage.getItem("react"))
+    setData(a);
 
+},[])
 
     if(stautus){
         return <First_main_page/>
