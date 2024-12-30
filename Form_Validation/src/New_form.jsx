@@ -1,4 +1,5 @@
 import { useState } from "react"
+import LoginPage from "./LoginPage";
 
 function New_form() {
     let [input,Setinput]=useState({
@@ -8,6 +9,7 @@ function New_form() {
         Email:"",
         password:""
     })
+    let [Status,setStatus]=useState(false)
     function inputvalue(e){
         let {name,value}=e.target;
         Setinput({
@@ -18,10 +20,25 @@ function New_form() {
 
     }
     function submit(e){
-        e.preventDefault();
-        console.log(input);
+       
+        if(input.UserName === ""){
+            e.preventDefault();
+            alert("fill it this Username filled")
+        }
+        if(input.UserName === ""){
+            e.preventDefault();
+            alert("fill it this Username filled")
+        }
+        // console.log(input);
+       else{
         let a=localStorage.setItem("react",JSON.stringify(input));
         console.log(a);
+        setStatus(true)
+        e.preventDefault();
+       }
+    }
+    if(Status){
+        return <LoginPage/>
     }
   return (
     <>
