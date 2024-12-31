@@ -29,6 +29,7 @@ function LoginPage() {
            alert("given the input is currect!!!");
         }
         else if(input.Username === Data.Email){
+            console.log("matching on this ")
             alert(" not matching the email");
         }
         else if(input.Password === ""){
