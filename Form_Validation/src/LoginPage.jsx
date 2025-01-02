@@ -25,19 +25,35 @@ function LoginPage() {
         // let pass=a.password;
         console.log(Data.Email,Data.password)
         console.log(input.Username)
+        let eamil_new =Data.Email;
+        let Password =Data.password;
+
+        let New_Email =input.Username;
+        let New_password =input.Password;
+        console.log("This is in the page of input value:",New_Email,New_password)
+        console.log("data in the " ,eamil_new ,Password);
+        
         if(input.Username== ""){
            alert("given the input is currect!!!");
         }
-        else if(input.Username === Data.Email){
+        else if(!(input.Username == Data.Email)){
             console.log("matching on this ")
             alert(" not matching the email");
         }
+        // else if(!(New_Email == eamil_new)){
+        //     console.log("matching on this ")
+        //     alert(" not matching the email");
+        // }
         else if(input.Password === ""){
             alert("3456754");
         }
-        else if(input.Password=== Data.password){
+
+        else if(!(input.Password=== Data.password)){
             alert("given the password it is this ");
         }
+        // else if(!(New_password=== Password)){
+        //     alert("given the password it is this ");
+        // }
         else{
             setStatus(true)
         }
