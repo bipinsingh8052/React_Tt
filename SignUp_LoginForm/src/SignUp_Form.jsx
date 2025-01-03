@@ -21,7 +21,6 @@ function SignUp_Form() {
     const Submited=(e)=>{
         e.preventDefault();
         if(sign.username==""){
-         
             alert("Please fill your name");
         }
         else if(!(sign.email.includes('@') && sign.email.includes(".com"))){
@@ -41,7 +40,9 @@ function SignUp_Form() {
        {
             alert("Please enter the strong Password");
         }
-        else if(sign.password === sign.confirmpassword){
+        else if(!(sign.password == sign.confirmpassword)){
+            // setsign.password=" ";
+            // setsign.confirmpassword=" ";
             alert("please write again password")
         }
         else{
@@ -59,7 +60,7 @@ function SignUp_Form() {
   return (
     <>
     <div className="conatiner">
-        <div className="form">
+        <div className="form"> 
             <h1>Sign Up</h1>
             <form onSubmit={Submited}>
                 <div className="name">
