@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import SignUp_Form from "./SignUp_Form";
 import './Login.css'
 import Main_page from "./Main_page";
 
 export default function Login() {
+  let value=useRef("");
+  let Secondvalue=useRef("");
   let [Click,setclick]=useState(false);
   let [nextpage,setnextpage]=useState(false);
   let [sign,setsign]=useState({
@@ -29,15 +31,19 @@ export default function Login() {
     console.log(localStorage_data);
     if(sign.email === ""){
       alert("Please fill the Email Id ");
+      // value.current.focus();
     }
     else if (!(sign.email=== localStorage_data.email) ){
       alert("Fill Right Email id ....!!!")
+      value.current.focus();
     }
     else if (sign.password === ""){
       alert("Please the fill the Password");
+      Secondvalue.current.focus();
     }
     else if(!(sign.password === localStorage_data.confirmpassword)){
       alert("Fill right Password ..!! ")
+      Secondvalue.current.focus();
     }
     else{
       setnextpage(true)
@@ -54,12 +60,12 @@ export default function Login() {
             <form onSubmit={FromCheck} >
                 <div className="email">
                     <label htmlFor="">Enter Email</label>
-                    <input type="email" name='email' value={sign.email} placeholder="Enter Email id" onChange={inputvalue} />
+                    <input ref={value} type="email" name='email' value={sign.email} placeholder="Enter Email id" onChange={inputvalue} />
                 </div>
                
                 <div className="password">
                     <label htmlFor="">Enter Password</label>
-                    <input type="password" name='password' value={sign.password} placeholder="Enter password" onChange={inputvalue} />
+                    <input ref={Secondvalue} type="password" name='password' value={sign.password} placeholder="Enter password" onChange={inputvalue} />
                 </div>
                
                 <div className="button">
