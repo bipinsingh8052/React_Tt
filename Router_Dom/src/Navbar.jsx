@@ -14,6 +14,10 @@ function Navbar() {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="\">Home</a>
         </li>
+
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="\"><Link to='/contact'>contact</Link></a>
+        </li>
         <li className="nav-item">
         <Link to='/about' >About</Link>
         </li>
