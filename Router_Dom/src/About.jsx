@@ -1,7 +1,9 @@
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export default function About() {
+    let {name,age,place}=useParams();
+    console.log(name,age,place)
     let nav=useNavigate()
     function contactpage(){
         nav('/contact')
@@ -17,6 +19,7 @@ export default function About() {
       Ab doloremque dolorum, laudantium sunt inventore consequuntur modi culpa fugiat, tempora exercitationem nesciunt a maxime magni earum iure unde quasi, optio odit adipisci assumenda suscipit libero id? Dicta, iure architecto.
       Corporis alias sint laudantium cum sunt soluta odit hic voluptates! Quod provident at voluptatum, praesentium unde, dolorem ipsam, ut a qui ab suscipit in voluptatibus nobis eveniet debitis omnis? Error.</p>
     </div>
+    {/* <h1>name</h1> */}
     <button onClick={contactpage}>click me </button>
     </>
   )
