@@ -1,3 +1,4 @@
+import Axios from "./Axios"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      
+      <Axios/>
     </>
   )
 }
