@@ -1,4 +1,5 @@
-import Axios from "./Axios"
+// import Axios from "./Axios"
+import Fetch_data from "./Fetch_data"
 
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <>
-      <Axios/>
+      {/* <Axios/> */}
+      <Fetch_data/>
     </>
   )
 }
