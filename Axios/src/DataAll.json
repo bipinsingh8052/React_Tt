@@ -8,32 +8,11 @@
       "id": "bbc8"
     },
     {
-      "name": "bipin",
-      "age": 10,
-      "contact": 1234567890,
-      "city": "Allahabad",
-      "id": "391e"
-    },
-    {
-      "name": "bipin",
-      "age": 10,
-      "contact": 1234567890,
-      "city": "Allahabad",
-      "id": "970a"
-    },
-    {
       "name": "Rinku",
       "age": 10,
       "contact": 1234,
       "city": "Allahabadi",
       "id": "23b1"
-    },
-    {
-      "name": "bipin",
-      "age": 10,
-      "contact": 1234567890,
-      "city": "Allahabad",
-      "id": "4be3"
     },
     {
       "name": "Rinku",
@@ -57,11 +36,25 @@
       "id": "8707"
     },
     {
-      "name": "bipin",
-      "age": 10,
-      "contact": 1234567890,
-      "city": "Allahabad",
-      "id": "c92f"
+      "id": "c65a",
+      "name": "Bipin singh",
+      "age": "67",
+      "contact": "80645263554",
+      "city": "puna"
+    },
+    {
+      "id": "6c4d",
+      "name": "Bipin yadav",
+      "age": "67",
+      "contact": "80645263554",
+      "city": "Prayagaraj"
+    },
+    {
+      "id": "a0c5",
+      "name": "Bipin yadav",
+      "age": "90",
+      "contact": "80645263554",
+      "city": "Prayagaraj"
     }
   ]
 }
