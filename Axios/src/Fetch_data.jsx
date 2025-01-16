@@ -8,6 +8,30 @@ export default function Fetch_data() {
       contact:"" ,
       city: ""
     })
+
+    // edit data
+    let [edata,set_edata]=useState([])
+    let [frmdata,set_frmdata]=useState(false)
+    let [edit_all_data,set_all_edit_data]=useState({})
+
+
+    function editinputfrom(e){
+      let {name,value}=e.target;
+      set_all_edit_data({...edit_all_data,[name]:value})
+    }
+
+
+    function editsubmitfrom(e){
+      e.preventDefault();
+      // axios.put("http://localhost:3000/all_data",edit_all_data)
+      // .then(res=>alert("your data is updata"))
+
+    }
+
+
+
+
+
       // Delete data by the help of id
     function myDel(id){
         axios.delete(`http://localhost:3000/all_data/${id}`)
@@ -30,6 +54,8 @@ export default function Fetch_data() {
       axios.post("http://localhost:3000/all_data",frmin)
       .then(res=>alert("Insert the data okkk"));
     }
+
+    
     useEffect(()=>{
       // fetch data in the api
         axios.get("http://localhost:3000/all_data")
@@ -56,6 +82,7 @@ export default function Fetch_data() {
                 <th>id</th>
                 <th>age</th>
                 <th></th>
+                <th></th>
             </thead>
             <tbody>
                 {/* {    datainfo.map((e)=>{
@@ -81,6 +108,7 @@ export default function Fetch_data() {
                             <td>{e.id}</td>
                             <td>{e.age}</td>
                             <td><button onClick={()=>myDel(e.id)}>Deleted</button></td>
+                            <td><button onClick={()=>{set_frmdata(!frmdata),set_all_edit_data(e)}}>Edit</button></td>
                         </tr>
                         )
                     })
@@ -108,6 +136,32 @@ export default function Fetch_data() {
         <br /><br />
         <button type="submit">submit </button>
       </form>
+
+
+
+
+
+
+
+
+      {frmdata && (
+        <form onSubmit={editsubmitfrom}>
+        <label htmlFor="">Name</label>
+        <input type="text" placeholder="Enter the Name:" value={edit_all_data.name} name="name" onChange={editinputfrom} />
+        <br /><br />
+        <label htmlFor="">Age</label>
+        <input type="text" placeholder="Enter the Age:"value={edit_all_data.age} name="age" onChange={editinputfrom} />
+        <br /><br />
+        <label htmlFor="">contact</label>
+        <input type="text" placeholder="Enter the contact:" value={edit_all_data.contact} name="contact" onChange={editinputfrom} />
+        <br /><br />
+
+        <label htmlFor="">City</label>
+        <input type="text" placeholder="Enter the City:" value={edit_all_data.city} name="city" onChange={editinputfrom} />
+        <br /><br />
+        <button type="submit">submit </button>
+      </form>
+      )}
     </>
   )
 }
