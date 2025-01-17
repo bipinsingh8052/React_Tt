@@ -22,9 +22,9 @@ export default function Fetch_data() {
 
 
     function editsubmitfrom(e){
-      e.preventDefault();
-      // axios.put("http://localhost:3000/all_data",edit_all_data)
-      // .then(res=>alert("your data is updata"))
+      // e.preventDefault();
+      axios.put(`http://localhost:3000/all_data/${edit_all_data.id}`,edit_all_data)
+      .then(res=>alert("your data is updata"))
 
     }
 
