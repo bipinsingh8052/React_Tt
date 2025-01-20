@@ -1,25 +1,11 @@
 {
   "all_data": [
     {
-      "name": "bipin hum nhi hm",
-      "age": 10,
-      "contact": "123456789",
-      "city": "Allahabad",
-      "id": "bbc8"
-    },
-    {
       "name": "Rinku",
       "age": 10,
       "contact": 1234,
       "city": "Allahabadi",
       "id": "23b1"
-    },
-    {
-      "name": "Rinku",
-      "age": 10,
-      "contact": 1234,
-      "city": "Allahabadi",
-      "id": "3484"
     },
     {
       "name": "bipin",
