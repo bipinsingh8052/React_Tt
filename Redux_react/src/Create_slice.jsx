@@ -33,4 +33,4 @@ export default counter.reducer;
 // is is a hook you can select the value(item)
 
 // use Dispatch
-// this is a hook you can perform the action (is means you can change the value)
+// this is a hook you can perform the action (is means you can change the value )
